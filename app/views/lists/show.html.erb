@@ -6,3 +6,5 @@
 <%= link_to "Update list",  edit_list_path(@list) %>
 
 <%= link_to "back", lists_path %>
+
+<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
