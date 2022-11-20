@@ -8,3 +8,5 @@
 <%= link_to "back", lists_path %>
 
 <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+
+<%= link_to "Movie add", new_list_bookmark_path(@list) %>

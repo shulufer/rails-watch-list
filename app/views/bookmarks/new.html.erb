@@ -1,0 +1,7 @@
+<h3>bookmarks</h3>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :movie   %>
+  <%= f.input :comment %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
