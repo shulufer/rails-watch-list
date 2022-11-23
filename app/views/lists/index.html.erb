@@ -1,45 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid row d-flex justify-content-start">
-
-    <div class="col-sm-2">
-      <a class="navbar-brand" href="#"><h1>Fake IMDB</h1></a>
-    </div>
-
-    <div class="d-flex justify-content-start col-sm-1 d-block">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">Menu</span>
-      </button>
-    </div>
-
-    <div class="d-flex justify-content-start d-flex col-sm-4">
-      <form>
-        <input class="form-control me-2" type="search" placeholder="List" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"></button>
-      </form>
-    </div>
+  <%# <%= cl_image_tag("1v4p5ielbrgq5we0m1rxrfce3y16", width: 800, height: 200, crop: :thumb, gravity: :face) %>
+<div class="conteiner">
 
 
+  <div class="card-small" >
+       <ul class = "card-small-list">
+        <% @lists.each do |list| %>
+          <%= cl_image_tag("1v4p5ielbrgq5we0m1rxrfce3y16", width: 150, height: 150, crop: :thumb, gravity: :face) %>
+          <li><%= link_to list.name, list_path(list) %></li>
+        <% end %>
+       </ul>
   </div>
-</nav>
-
-    <%= cl_image_tag("1v4p5ielbrgq5we0m1rxrfce3y16", width: 800, height: 200, crop: :thumb, gravity: :face) %>
 
 
-
-    <div class="card" style="width: 18rem;">
-
-         <ul>
-           <% @lists.each do |list| %>
-             <div class="card-body">
-               <%= cl_image_tag("1v4p5ielbrgq5we0m1rxrfce3y16", width: 150, height: 150, crop: :thumb, gravity: :face) %>
-               <li class="card-title"><%= link_to list.name, list_path(list) %></li>
-             </div>
-           <% end %>
-         </ul>
-
-    </div>
+</div>
+<%# <h3><%= link_to "Create your list", new_list_path %>
 
 
-<h3><%= link_to "Create your list", new_list_path %></h3>
-
-<%= cl_image_tag("1v4p5ielbrgq5we0m1rxrfce3y16", width: 150, height: 150, crop: :thumb, gravity: :face) %>
+<%# <%= cl_image_tag("1v4p5ielbrgq5we0m1rxrfce3y16", width: 150, height: 150, crop: :thumb, gravity: :face) %>
