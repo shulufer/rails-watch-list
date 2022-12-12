@@ -1,19 +1,47 @@
 .card-small {
+  display:  flex;
+  flex-direction: wrap;
+
+  .card-small-information {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+
+    .card-small-picture {
+
+
+      &:hover {
+        transform: rotateY(180deg);
+
+
+      }
+    }
+
+
+    .card-small-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(181, 178, 178);
 
 
 
-  .card-small-list {
-    display:  flex;
-    flex-direction: wrap;
 
+
+    a {
+      color: rgb(69, 77, 37);
+
+
+    }
+
+
+    }
   }
 
-  .card-small-image {
 
-  }
 
-  .card-small-title {
 
-  }
+
+
 
 }

@@ -1,14 +1,18 @@
   <%# <%= cl_image_tag("1v4p5ielbrgq5we0m1rxrfce3y16", width: 800, height: 200, crop: :thumb, gravity: :face) %>
-<div class="conteiner">
+<div class="container">
 
 
-  <div class="card-small" >
-       <ul class = "card-small-list">
-        <% @lists.each do |list| %>
-          <%= cl_image_tag("1v4p5ielbrgq5we0m1rxrfce3y16", width: 150, height: 150, crop: :thumb, gravity: :face) %>
-          <li><%= link_to list.name, list_path(list) %></li>
-        <% end %>
-       </ul>
+  <div class="card-small">
+    <% @lists.each do |list| %>
+      <div class="card-small-information shadow" >
+        <div class = "card-small-picture">
+          <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+        </div>
+        <div class="card-small-name">
+          <%= link_to list.name.capitalize, list_path(list) %>
+        </div>
+      </div>
+    <% end %>
   </div>
 
 
