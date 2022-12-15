@@ -7,26 +7,12 @@
     padding: 10px;
     border-radius: 5px;
 
-    .card-small-picture {
-
-
-      &:hover {
-        transform: rotateY(180deg);
-
-
-      }
-    }
-
 
     .card-small-name {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(181, 178, 178);
-
-
-
-
 
     a {
       color: rgb(69, 77, 37);
