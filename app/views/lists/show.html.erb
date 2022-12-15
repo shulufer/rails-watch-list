@@ -17,7 +17,10 @@
 
 
 
+  <%= link_to "Delete", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
 
 
     <%= link_to "Movie add", new_list_bookmark_path(@list) %>
 </div>
+
