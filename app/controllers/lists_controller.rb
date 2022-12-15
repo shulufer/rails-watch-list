@@ -6,6 +6,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @movies = Movie.all
   end
 
   def edit
@@ -23,6 +24,7 @@ class ListsController < ApplicationController
   end
 
   def create
+    @movies = Movie.all
     @list = List.new(list_params)
     if @list.save
       redirect_to list_path(@list)

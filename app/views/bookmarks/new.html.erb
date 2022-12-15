@@ -1,7 +1,14 @@
 <h3>bookmarks</h3>
 
 <%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :movie   %>
+  <%= f.association :movie, as: :select %>
   <%= f.input :comment %>
   <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
+
+
+<% @movies.each_with_index do |movie, index| %>
+  <ul>
+    <li><%= "#{index+1}-#{movie.title}" %></li>
+  </ul>
 <% end %>
