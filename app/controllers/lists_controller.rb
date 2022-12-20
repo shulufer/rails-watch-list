@@ -5,16 +5,24 @@ class ListsController < ApplicationController
   end
 
   def show
+
+
     @list = List.find(params[:id])
-    @movies = Movie.all
+    @bookmarks = Bookmark.all
+
+
   end
 
   def edit
+
     @list = List.find(params[:id])
+
   end
 
   def update
+
     @list = List.find(params[:id])
+
     @list.update(list_params)
     redirect_to list_path(@list)
   end
