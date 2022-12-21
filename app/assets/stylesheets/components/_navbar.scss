@@ -27,6 +27,10 @@
 
 .navbar-item {
   margin: 5px;
-  margin-left: 10px;
+  margin-left: 20px;
   color: black;
+  a {
+    color: black;
+    font-style: none;
+  }
 }
