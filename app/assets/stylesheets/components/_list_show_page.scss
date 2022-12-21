@@ -1,0 +1,132 @@
+.list-information {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.list-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-link {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  width: 110px;
+  height: 50px;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s;
+  a {
+    color: white;
+    text-decoration: none;
+
+
+  }
+
+
+
+
+}
+
+.button:hover {
+  transform: scale(1.15);
+}
+
+.update {
+  background-color: green;
+
+}
+.back {
+  background-color: rgb(19, 0, 128);
+}
+.delete {
+  background-color: rgb(128, 0, 0);
+}
+.movie-add {
+  background-color: rgb(100, 128, 0);
+}
+
+
+
+.movies-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.film-poster
+{
+  width: 302px;
+  height: 299px;
+  margin: 10px;
+  float: left; /* stack each div horizontally */
+
+  img {
+    width: 302px;
+    height: 299px;
+    border-radius: 10px;
+  }
+}
+
+.film-poster > .front
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+
+    width: 302px;
+    height: 290px;
+
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+.film-poster > .back
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    background: #262626;
+    color: #fff;
+    width: 302px;
+    height: 290px;
+    border-radius: 10px;
+    padding: 5px;
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .5s linear 0s;
+    p {
+      font-size: small;
+    }
+}
+
+.film-poster:hover > .front
+{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.film-poster:hover > .back
+{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.back {
+  position: relative;
+}
+
+.movie {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  background-color: rgb(103, 11, 103);
+
+}
