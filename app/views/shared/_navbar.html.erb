@@ -1,8 +1,32 @@
-<div class="navbar-container">
+<div class="container">
+  <div class="navbar">
+    <div class="navbar-icon">
+      <%= image_tag "2ATHYW0-1038x778.webp", class: "logo" %>
 
-  <div class="navbar-item"><%= link_to "Home", lists_path %></div>
-  <div class="navbar-item"><%= link_to "New List", new_list_path %></div>
-  <div class="navbar-item"><%= link_to "Films", lists_path %></div>
-  <div class="navbar-item"><%= link_to "Contact", lists_path %></div>
+    </div>
 
+    <div class="navbar-link">
+      <div class="navbar-item">
+        <%= link_to lists_path do %>
+          <i class="fa-solid fa-house"></i>
+        <% end %>
+      </div>
+      <div class="navbar-item">
+        <%= link_to new_list_path do %>
+          <i class="fa-light fa-plus"></i>
+        <% end %>
+      </div>
+      <div class="navbar-item">
+        <%= link_to lists_path do %>
+          <i class="fa-solid fa-film"></i>
+        <% end %>
+      </div>
+      <div class="navbar-item">
+        <%= link_to lists_path do %>
+          <i class="fa-solid fa-address-book"></i>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
 </div>
